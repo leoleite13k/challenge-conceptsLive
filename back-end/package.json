@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
   "devDependencies": {
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
