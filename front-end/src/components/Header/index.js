@@ -1,24 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Logo } from './styles';
+import { Container, Logo, Logout } from './styles';
 
-export default function Header({ rec }) {
+export default function Header({ loading }) {
   return (
     <Container>
-      <Logo bg={rec && '#f00'}>
+      <Logo bg={!loading && '#f00'}>
         <h1>Live</h1>
         <div />
       </Logo>
-      <button type="button">Sair</button>
+      <Logout to="/">Sair</Logout>
     </Container>
   );
 }
 
-Header.defaultProps = {
-  rec: false,
-};
-
 Header.propTypes = {
-  rec: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
 };

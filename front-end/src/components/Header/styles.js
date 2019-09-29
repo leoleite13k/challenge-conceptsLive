@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
@@ -8,21 +9,6 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   background: #2272a1;
-
-  button {
-    padding: 5px 20px;
-    font-size: 20px;
-    border: 1px solid #eee;
-    font-weight: bold;
-    text-decoration: none;
-    color: #eee;
-    background: #2272a1;
-    transition: background 0.2s;
-
-    &:hover {
-      background: ${lighten(0.05, '#2272a1')};
-    }
-  }
 `;
 
 export const Logo = styled.div`
@@ -41,5 +27,20 @@ export const Logo = styled.div`
     border-radius: 50%;
     margin-left: 10px;
     background: ${props => props.bg || '#eee'};
+  }
+`;
+
+export const Logout = styled(Link)`
+  padding: 5px 20px;
+  font-size: 20px;
+  border: 1px solid #eee;
+  font-weight: bold;
+  text-decoration: none;
+  color: #eee;
+  background: #2272a1;
+  transition: background 0.2s;
+
+  &:hover {
+    background: ${lighten(0.05, '#2272a1')};
   }
 `;
